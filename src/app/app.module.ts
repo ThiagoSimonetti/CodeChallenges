@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { JsonObjectComponent } from './json-object/json-object.component';
+import { PersonComponent } from './person/person.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    JsonObjectComponent
+    JsonObjectComponent,
+    PersonComponent
   ],
   imports: [
     BrowserModule,
