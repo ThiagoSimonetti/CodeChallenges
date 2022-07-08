@@ -1,12 +1,15 @@
+// import { Person } from '../app.component';
 import { Component, Injectable, OnInit } from '@angular/core';
-import { Person } from 'src/app/models/person.model';
+import { Person } from '../app.component';
 
 @Component({
   selector: 'app-json-object',
   templateUrl: './json-object.component.html',
   styleUrls: ['./json-object.component.css'],
 })
-@Injectable()
+@Injectable({
+  providedIn: 'root',
+})
 export class JsonObjectComponent implements OnInit {
   arrayJson: Person[] = [
     new Person(1, 'James', 'Simonetti'),

@@ -1,5 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Person } from '../models/person.model';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-person',
@@ -7,9 +6,14 @@ import { Person } from '../models/person.model';
   styleUrls: ['./person.component.css'],
 })
 export class PersonComponent implements OnInit {
-  @Input() people: any;
+  @Input() person: any;
+  @Output() deletePerson: EventEmitter<any> = new EventEmitter();
 
-  constructor(person: Person) {}
+  constructor() {}
+
+  delete(id: number) {
+    this.deletePerson.emit(id);
+  }
 
   ngOnInit(): void {}
 }

@@ -1,5 +1,8 @@
-<p>person works!</p>
-<div *ngFor="let person of people">
-  <span>first name:{person.firstName}</span>
-  <span>last name:{person.lastName}</span>
-</div>
+<section>
+  <ul>
+    <span>first name: {{ person.firstName }} </span
+    ><br />
+    <span>last name: {{ person.lastName }} </span>
+    <button (click)="delete(person.id)">Delete</button>
+  </ul>
+</section>
